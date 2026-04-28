@@ -6,8 +6,10 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
   "jupyter>=1.1.1",
+  "matplotlib>=3.10.9",
   "numpy>=2.4.4",
   "pandas>=3.0.2",
+  "pillow>=12.2.0",
   "plotly>=6.7.0",
   "polars>=1.39.3",
   "scikit-learn>=1.8.0",
@@ -15,9 +17,17 @@ dependencies = [
 
 [dependency-groups]
 format = [
-    "black>=26.3.1",
-    "isort>=8.0.1",
-    "jupyterlab-code-formatter>=3.0.3",
-    "ruff>=0.15.10",
-    "ty>=0.0.31",
+  "black>=26.3.1",
+  "isort>=8.0.1",
+  "jupyterlab-code-formatter>=3.0.3",
+  "ruff>=0.15.10",
+  "ty>=0.0.31",
 ]
+
+[tool.pyright]
+exclude = [".venv"]
+venvPath = ".venv"
+venv = "."
+
+[tool.ty.environment]
+python = "./.venv"
