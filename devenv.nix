@@ -37,7 +37,7 @@
       enable = true;
       sync = {
         enable = true;
-        groups = [ ];
+        groups = [ "format" ];
       };
     };
 
